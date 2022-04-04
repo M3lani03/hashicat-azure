@@ -1,4 +1,4 @@
-provider "resource_group_name" {
+provider "resourcegroupname" {
   features {}
 }
 
