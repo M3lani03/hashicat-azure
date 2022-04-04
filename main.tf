@@ -9,6 +9,7 @@ terraform {
 
 provider "azurerm" {
   features {}
+  departement = "devops"
 }
 
 resource "azurerm_resource_group" "myresourcegroup" {
@@ -202,3 +203,5 @@ resource "null_resource" "configure-cat-app" {
     }
   }
 }
+
+
