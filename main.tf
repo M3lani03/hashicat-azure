@@ -11,13 +11,6 @@ provider "azurerm" {
   features {}
 }
 
-provider "azurerm_virtual_machine"{
-  tags = {
-    name = "departement"
-    departement = "devops"
-  }
-}
-
 resource "azurerm_resource_group" "myresourcegroup" {
   name     = "${var.prefix}-workshop"
   location = var.location
@@ -210,4 +203,10 @@ resource "null_resource" "configure-cat-app" {
   }
 }
 
+provider "azurerm_virtual_machine"{
+  tags = {
+    name = "departement"
+    departement = "devops"
+  }
+}
 
