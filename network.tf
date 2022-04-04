@@ -33,3 +33,7 @@ module "network" {
   version = "3.5.0"
   # insert required variables here
 }
+
+module "resource_group_name"{
+    
+}
