@@ -203,10 +203,4 @@ resource "null_resource" "configure-cat-app" {
   }
 }
 
-provider "azurerm_virtual_machine"{
-  tags = {
-    name = "departement"
-    departement = "devops"
-  }
-}
 
