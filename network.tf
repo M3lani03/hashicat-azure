@@ -1,4 +1,4 @@
-provider "azurermnetwork" {
+provider "resource_group_name" {
   features {}
 }
 
