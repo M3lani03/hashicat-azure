@@ -1,4 +1,4 @@
-provider "terraform-azure-network" {
+provider "gaurav" {
   features {}
 }
 
