@@ -9,7 +9,6 @@ terraform {
 
 provider "azurerm" {
   features {}
-  departement = "devops"
 }
 
 resource "azurerm_resource_group" "myresourcegroup" {
@@ -136,7 +135,10 @@ resource "azurerm_virtual_machine" "catapp" {
     disable_password_authentication = false
   }
 
-  tags = {}
+  tags = {
+    name = "departement"
+    departement = "devops"
+  }
 
   # Added to allow destroy to work correctly.
   depends_on = [azurerm_network_interface_security_group_association.catapp-nic-sg-ass]
