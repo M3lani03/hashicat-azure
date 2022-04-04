@@ -1,4 +1,4 @@
-provider "gaurav" {
+provider "azurerm" {
   features {}
 }
 
@@ -14,6 +14,12 @@ module "network" {
   subnet_prefixes     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
   subnet_names        = ["subnet1", "subnet2", "subnet3"]
 
+
+  source  = "app.terraform.io/melanievasseur/network/azurerm"
+  version = "3.5.0"
+  # insert required variables here
+
+
   subnet_service_endpoints = {
     "subnet1" : ["Microsoft.Sql"], 
     "subnet2" : ["Microsoft.Sql"],
@@ -26,10 +32,4 @@ module "network" {
   }
 
   depends_on = [azurerm_resource_group.example]
-}
-
-module "networkvm" {
-  source  = "app.terraform.io/melanievasseur/network/azurerm"
-  version = "3.5.0"
-  # insert required variables here
 }
