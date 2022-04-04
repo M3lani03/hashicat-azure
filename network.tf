@@ -1,4 +1,4 @@
-provider "resource_group_name" {
+provider "azurerm" {
   features {}
 }
 
@@ -28,7 +28,7 @@ module "network" {
   depends_on = [azurerm_resource_group.example]
 }
 
-module "network" {
+module "networkvm" {
   source  = "app.terraform.io/melanievasseur/network/azurerm"
   version = "3.5.0"
   # insert required variables here
