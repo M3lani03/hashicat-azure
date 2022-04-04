@@ -1,4 +1,4 @@
-provider "resourcegroupname" {
+provider "terraform-azure-network" {
   features {}
 }
 
